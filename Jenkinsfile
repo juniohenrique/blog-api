@@ -9,14 +9,14 @@ node {
             ruby("rspec -fd --format RspecJunitFormatter --out logs/unit_tests.xml")
             junit 'logs/unit_tests.xml'
         }
-            stage("QA") {
+            stage("Testing") {
             sh "./deploy.sh testing"
             env.RACK_ENV = 'testing'
             ruby("rspec -fd --format RspecJunitFormatter --out logs/func_tests.xml")
             junit 'logs/func_tests.xml'
         }
         stage("Production") {
-            sh "ls"
+            sh "./deploy.sh production"
         }
     }
     catch (err) {

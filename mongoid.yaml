@@ -16,3 +16,16 @@ testing:
       options:
         user: qaninja
         password: qaninja
+production:
+  clientes:
+    default:
+      database: heroku_m9jmrgcs
+      hosts:
+        - ds249428.mlab.com:49428
+      options:
+        user: qaninja_prod
+        password: qaninja_prod
+
+
+
+
