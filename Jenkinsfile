@@ -1,19 +1,19 @@
 node {
     try {
         stage("Build") {
-            git 'git@github.com:qaninjahq/jenkins-1802.git'
-            ruby('cd api && bundler install')
+            git 'git@github.com:qaninjahq/blog-api.git'
+            ruby('bundler install')
         }
         stage("Development") {
             env.RACK_ENV = 'development'
-            ruby("cd api && rspec -fd --format RspecJunitFormatter --out logs/unit_tests.xml")
-            junit 'api/logs/unit_tests.xml'
+            ruby("rspec -fd --format RspecJunitFormatter --out logs/unit_tests.xml")
+            junit 'logs/unit_tests.xml'
         }
             stage("QA") {
-            sh "./api/deploy.sh testing"
+            sh "./deploy.sh testing"
             env.RACK_ENV = 'testing'
-            ruby("cd api && rspec -fd --format RspecJunitFormatter --out logs/func_tests.xml")
-            junit 'api/logs/func_tests.xml'
+            ruby("rspec -fd --format RspecJunitFormatter --out logs/func_tests.xml")
+            junit 'logs/func_tests.xml'
         }
         stage("Production") {
             sh "ls"
@@ -21,7 +21,7 @@ node {
     }
     catch (err) {
         currentBuild = 'Deu ruim no build :('
-        junit 'api/logs/*.xml'
+        junit 'logs/*.xml'
         throw err
     }
 
