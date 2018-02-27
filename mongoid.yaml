@@ -17,7 +17,7 @@ testing:
         user: qaninja
         password: qaninja
 prod:
-  clientes:
+  clients:
     default:
       database: heroku_m9jmrgcs
       hosts:
