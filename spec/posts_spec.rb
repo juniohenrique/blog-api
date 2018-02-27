@@ -53,7 +53,7 @@ describe 'nBlog Api' do
           description: Faker::Lorem.paragraph
         }
         put 'api/posts/' + @post[:_id].to_s, request.to_json
-        expect_status(201)
+        expect_status(200)
       end
     end
   end

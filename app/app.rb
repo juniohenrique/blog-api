@@ -7,5 +7,5 @@ require_relative 'routes/posts'
 
 get '/' do
   @env = ENV['RACK_ENV'].to_s.upcase
-  "Welcome to nBlog API v3.2 | Environment: #{@env}."
+  "Welcome to nBlog API v3.3 | Environment: #{@env}."
 end
