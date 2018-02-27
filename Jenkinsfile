@@ -16,7 +16,7 @@ node {
             junit 'logs/func_tests.xml'
         }
         stage("Production") {
-            sh "./deploy.sh production"
+            sh "./deploy.sh prod"
         }
     }
     catch (err) {
