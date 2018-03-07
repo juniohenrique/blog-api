@@ -1,7 +1,7 @@
 node {
     try {
         stage("Build") {
-            git 'git@github.com:qaninjahq/blog-api.git'
+            git 'git@github.com:juniohenrique/blog-api.git'
             ruby('bundler install')
         }
         stage("Development") {

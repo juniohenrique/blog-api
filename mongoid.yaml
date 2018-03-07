@@ -1,30 +1,30 @@
 development:
   clients:
     default:
-      database: blog-db-dev
+      database: heroku_xz2t9jrw
       hosts:
-        - ds243728.mlab.com:43728
+        - ds257848.mlab.com:57848
       options:
-        user: qaninja
-        password: qaninja
+        user: juniohenrique
+        password: juniohenrique
 testing:
   clients:
     default:
-      database: heroku_xpt0238f
+      database: heroku_bs5wbzkt
       hosts:
-        - ds243798.mlab.com:43798
+        - ds245518.mlab.com:45518
       options:
-        user: qaninja
-        password: qaninja
+        user: juniohenrique
+        password: juniohenrique
 prod:
   clients:
     default:
-      database: heroku_m9jmrgcs
+      database: heroku_578gxv6q
       hosts:
-        - ds249428.mlab.com:49428
+        - ds259768.mlab.com:59768
       options:
-        user: qaninja_prod
-        password: qaninja_prod
+        user: juniohenrique
+        password: juniohenrique
 
 
 
