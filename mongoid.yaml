@@ -1,9 +1,9 @@
 development:
   clients:
     default:
-      database: blog-db-dev
+      database: heroku_xz2t9jrw
       hosts:
-        - ds243768.mlab.com:43768
+        - ds257848.mlab.com:57848
       options:
         user: juniohenrique
         password: juniohenrique
