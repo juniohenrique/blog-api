@@ -5,9 +5,9 @@ node {
             ruby('bundler install')
         }
         stage("Development") {
-            env.RACK_ENV = 'development'
-            ruby("rspec -fd --format RspecJunitFormatter --out logs/unit_tests.xml")
-            junit 'logs/unit_tests.xml'
+            // env.RACK_ENV = 'development'
+            // ruby("rspec -fd --format RspecJunitFormatter --out logs/unit_tests.xml")
+            // junit 'logs/unit_tests.xml'
         }
             stage("Testing") {
             sh "./deploy.sh testing"
