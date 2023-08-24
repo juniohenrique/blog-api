@@ -10,7 +10,7 @@ gem 'rake'
 
 group :test, :development do
   gem 'faker'
-  gem 'airborne', '>= 0.3.4'
+  gem 'airborne', '>= 0.3.5'
   gem 'rspec'
   gem 'rspec_junit_formatter'
 end
